@@ -2,8 +2,9 @@ import { useChartEditStore } from '@/store/modules/chartEditStore/chartEditStore
 import { WinKeyboard, MacKeyboard, MenuEnum } from '@/enums/editPageEnum'
 import throttle from 'lodash/throttle'
 import debounce from 'lodash/debounce'
-
 import keymaster from 'keymaster'
+import { setKeyboardDressShow } from '@/utils'
+
 // Keymaster可以支持识别以下组合键： ⇧，shift，option，⌥，alt，ctrl，control，command，和⌘
 const chartEditStore = useChartEditStore()
 
@@ -27,7 +28,7 @@ export const winKeyboardValue = {
   [MenuEnum.LOCK]: winCtrlMerge('l'),
   [MenuEnum.UNLOCK]: winCtrlMerge(winShiftMerge('l')),
   [MenuEnum.HIDE]: winCtrlMerge('h'),
-  [MenuEnum.SHOW]: winCtrlMerge(winShiftMerge('h')),
+  [MenuEnum.SHOW]: winCtrlMerge(winShiftMerge('h'))
 }
 
 // 这个 Ctrl 后面还是换成了 ⌘
@@ -52,7 +53,7 @@ export const macKeyboardValue = {
   [MenuEnum.LOCK]: macCtrlMerge('l'),
   [MenuEnum.UNLOCK]: macCtrlMerge(macShiftMerge('l')),
   [MenuEnum.HIDE]: macCtrlMerge('h'),
-  [MenuEnum.SHOW]: macCtrlMerge(macShiftMerge('h')),
+  [MenuEnum.SHOW]: macCtrlMerge(macShiftMerge('h'))
 }
 
 // Win 快捷键列表
@@ -77,7 +78,7 @@ const winKeyList: Array<string> = [
   winKeyboardValue.unLock,
 
   winKeyboardValue.hide,
-  winKeyboardValue.show,
+  winKeyboardValue.show
 ]
 
 // Mac 快捷键列表
@@ -102,21 +103,29 @@ const macKeyList: Array<string> = [
   macKeyboardValue.unLock,
 
   macKeyboardValue.hide,
-  macKeyboardValue.show,
+  macKeyboardValue.show
 ]
 
 // 处理键盘记录
 const keyRecordHandle = () => {
-  // 初始化清空
-  if(window.$KeyboardActive) window.$KeyboardActive = new Set([])
-
+  // 默认赋值
+  window.$KeyboardActive = {
+    ctrl: false
+  }
+  
   document.onkeydown = (e: KeyboardEvent) => {
-    if(window.$KeyboardActive) window.$KeyboardActive.add(e.key.toLocaleLowerCase())
-    else window.$KeyboardActive = new Set([e.key.toLocaleLowerCase()])
+    if(e.keyCode === 17 && window.$KeyboardActive) {
+      setKeyboardDressShow(e.keyCode)
+      window.$KeyboardActive.ctrl = true
+    }
   }
 
   document.onkeyup = (e: KeyboardEvent) => {
-    if(window.$KeyboardActive) window.$KeyboardActive.delete(e.key.toLocaleLowerCase())
+    if(e.keyCode === 17 && window.$KeyboardActive) 
+    {
+      window.$KeyboardActive.ctrl = false
+      setKeyboardDressShow()
+    }
   }
 }
 
