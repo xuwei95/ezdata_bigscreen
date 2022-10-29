@@ -20,7 +20,7 @@ GoView 是一个高效的拖拽式低代码数据可视化开发平台，将图�
 
 ### 🤯 后端项目
 
-后端项目gitee地址：[https://gitee.com/MTrun/go-view-serve](https://gitee.com/MTrun/go-view-serve)
+后端项目 gitee 地址：[https://gitee.com/MTrun/go-view-serve](https://gitee.com/MTrun/go-view-serve)
 
 接口说明地址：[https://docs.apipost.cn/preview/5aa85d10a59d66ce/ddb813732007ad2b?target_id=84dbc5b0-158f-4bcb-8f74-793ac604ada3#3e053622-1e76-43f9-a039-756aee822dbb](https://docs.apipost.cn/preview/5aa85d10a59d66ce/ddb813732007ad2b?target_id=84dbc5b0-158f-4bcb-8f74-793ac604ada3#3e053622-1e76-43f9-a039-756aee822dbb)
 
@@ -45,8 +45,17 @@ GoView 是一个高效的拖拽式低代码数据可视化开发平台，将图�
 数据过滤：
 ![项目截图](readme/go-view-filter.png)
 
+高级事件编辑:
+![高级事件编辑](readme/go-view-event.png)
+
 主题色：
 ![项目截图](readme/go-view-color.png)
+
+快捷主页：
+![项目截图](readme/go-view-indexpage.png)
+
+快捷主页：
+![白色皮肤](readme/go-view-theme.png)
 
 主要技术栈为：
 
@@ -71,10 +80,12 @@ GoView 是一个高效的拖拽式低代码数据可视化开发平台，将图�
 | 图表   | 柱状图           | 横向柱状图 | 折线图         | 单/多 折线面积图(渐变色) |
 | \*     | 饼图             | 环形图     | 水球图         | 雷达图                   |
 | \*     | NaiveUI 多种进度 | 散点图     | 对数回归散点图 | 热力图                   |
-| \*     | 漏斗图           | 中国地图   | 🤪             | 🤖                       |
-| 信息   | 文字             | 渐变文字   | 图片           | 😶                       |
-| 列表   | 滚动排名列表     | 滚动表格   | 🤓             | 👻                       |
+| \*     | 漏斗图           | 中国地图   | 高德地图       | 🦊                       |
+| 信息   | 文字             | 渐变文字   | 词云           | 嵌套网页                 |
+| \*     | 图片             | 视频       | 😺             | 🐯                       |
+| 列表   | 滚动排名列表     | 滚动表格   | 🐮             | 🐐                       |
 | 小组件 | 边框-01~13       | 装饰-01~05 | 数字翻牌       | 通用时间                 |
+| \*     | 数字计数         | 倒计时     | 时钟           | 🦁                       |
 
 ## 浏览器支持
 
