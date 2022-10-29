@@ -1,6 +1,6 @@
 ## 总览
 
-![logo](readme/logo-t-y.png)
+<img src="readme/logo-t-y.png" alt="go-view" style="display: block; margin: 0 auto 20px;" />
 
 GoView 是一个高效的拖拽式低代码数据可视化开发平台，将图表或页面元素封装为基础组件，无需编写代码即可制作数据大屏，减少心智负担。
 
