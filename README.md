@@ -48,13 +48,13 @@ GoView 是一个高效的拖拽式低代码数据可视化开发平台，将图�
 高级事件编辑:
 ![高级事件编辑](readme/go-view-event.png)
 
-主题色：
-![项目截图](readme/go-view-color.png)
-
 快捷主页：
 ![项目截图](readme/go-view-indexpage.png)
 
-快捷主页：
+主题色：
+![项目截图](readme/go-view-color.png)
+
+白色皮肤：
 ![白色皮肤](readme/go-view-theme.png)
 
 主要技术栈为：
