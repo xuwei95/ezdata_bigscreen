@@ -12,9 +12,9 @@
 
 #### 📚 GoView **文档** 地址：[https://www.mtruning.club/](https://www.mtruning.club/)
 
-项目纯前端-Demo 地址：[https://demo.mtruning.club/](https://demo.mtruning.club/)
+项目纯前端-Demo 地址：[https://vue.mtruning.club/](https://vue.mtruning.club/)
 
-项目带后端-Demo 地址：[后端 Demo 地址](http://1.117.240.165:8080/goview/#/login)
+项目带后端-Demo 地址：[https://demo.mtruning.club/](https://demo.mtruning.club/)
 
 文档-源码地址：[https://gitee.com/MTrun/go-view-doc](https://gitee.com/MTrun/go-view-doc)
 
