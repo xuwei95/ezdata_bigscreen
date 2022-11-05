@@ -36,26 +36,29 @@
 
 - 封装：项目进行了详细的工具类封装如：路由、存储、加/解密、文件处理、主题、NaiveUI 全局方法、组件等
 
+说明文档：
+![说明文档](readme/go-view-doc.png)
+
 工作台：
-![项目截图](readme/go-view-canvas.png)
+![工作台](readme/go-view-canvas.png)
 
 请求配置：
-![项目截图](readme/go-view-fetch.png)
+![请求配置](readme/go-view-fetch.png)
 
 数据过滤：
-![项目截图](readme/go-view-filter.png)
+![数据过滤](readme/go-view-filter.png)
 
 高级事件编辑:
 ![高级事件编辑](readme/go-view-event.png)
 
 快捷主页：
-![项目截图](readme/go-view-indexpage.png)
+![快捷主页](readme/go-view-indexpage.png)
 
 主题色：
-![项目截图](readme/go-view-color.png)
+![主题色](readme/go-view-color.png)
 
-白色皮肤：
-![白色皮肤](readme/go-view-theme.png)
+亮白主题：
+![亮白主题](readme/go-view-theme.png)
 
 主要技术栈为：
 
