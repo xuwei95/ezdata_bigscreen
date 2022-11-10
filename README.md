@@ -26,7 +26,7 @@
 
 其它后端方案地址：
 
-- 【.net】[https://gitee.com/sun_xiang_yu/go-view-dotnet](https://gitee.com/sun_xiang_yu/go-view-dotnet)
+- 【.NET】[https://gitee.com/sun_xiang_yu/go-view-dotnet](https://gitee.com/sun_xiang_yu/go-view-dotnet)
 
 #### 整体介绍
 
