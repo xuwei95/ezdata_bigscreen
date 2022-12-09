@@ -110,8 +110,7 @@ pnpm install
 #yarn
 yarn install
 
-#npm
-npm install
+# 千万不要使用 npm 会报错
 ```
 
 ## 启动
@@ -119,9 +118,6 @@ npm install
 ```shell
 #pnpm
 pnpm dev
-
-# npm
-npm run dev
 
 #yarn
 yarn dev
@@ -135,9 +131,6 @@ make dev
 ```shell
 #pnpm
 pnpm run build
-
-# npm
-npm run build
 
 #yarn
 yarn run build
