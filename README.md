@@ -18,11 +18,12 @@
 
 文档-源码地址：[https://gitee.com/MTrun/go-view-doc](https://gitee.com/MTrun/go-view-doc)
 
+Cloud IDE 代码在线预览地址：[https://idegitee.com/dromara/go-view](https://idegitee.com/dromara/go-view)
 #### 🤯 后端项目看这里!
 
 后端项目 gitee 地址：[https://gitee.com/MTrun/go-view-serve](https://gitee.com/MTrun/go-view-serve)
 
-接口说明地址：[https://docs.apipost.cn/preview/5aa85d10a59d66ce/ddb813732007ad2b?target_id=84dbc5b0-158f-4bcb-8f74-793ac604ada3#3e053622-1e76-43f9-a039-756aee822dbb](https://docs.apipost.cn/preview/5aa85d10a59d66ce/ddb813732007ad2b?target_id=84dbc5b0-158f-4bcb-8f74-793ac604ada3#3e053622-1e76-43f9-a039-756aee822dbb)
+接口说明地址：[https://docs.apipost.cn/...](https://docs.apipost.cn/preview/5aa85d10a59d66ce/ddb813732007ad2b?target_id=84dbc5b0-158f-4bcb-8f74-793ac604ada3#3e053622-1e76-43f9-a039-756aee822dbb)
 
 其它后端方案地址：
 
@@ -39,10 +40,6 @@
 - 存储：拥有本地记忆，部分配置项采用 `storage` 存储本地，提升使用体验；
 
 - 封装：项目进行了详细的工具类封装如：路由、存储、加/解密、文件处理、主题、NaiveUI 全局方法、组件等
-
-#### 在 Cloud IDE 中预览
-
-[https://idegitee.com/dromara/go-view](https://idegitee.com/dromara/go-view)
 
 说明文档：
 ![说明文档](readme/go-view-doc.png)
