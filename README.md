@@ -40,6 +40,10 @@
 
 - 封装：项目进行了详细的工具类封装如：路由、存储、加/解密、文件处理、主题、NaiveUI 全局方法、组件等
 
+#### 在 Cloud IDE 中预览
+
+[https://idegitee.com/dromara/go-view](https://idegitee.com/dromara/go-view)
+
 说明文档：
 ![说明文档](readme/go-view-doc.png)
 
