@@ -103,45 +103,7 @@ Cloud IDE 代码在线预览地址：[https://idegitee.com/dromara/go-view](http
 
 ## 安装
 
-本项目采用` pnpm` 进行包管理
-
-```shell
-#建议使用 nrm 切换到淘宝源 https://registry.npmmirror.com/
-#pnpm
-pnpm install
-
-#yarn
-yarn install
-
-# 千万不要使用 npm 会报错
-```
-
-## 启动
-
-```shell
-#pnpm
-pnpm dev
-
-#yarn
-yarn dev
-
-#Makefile
-make dev
-```
-
-## 编译
-
-```shell
-#pnpm
-pnpm run build
-
-#yarn
-yarn run build
-
-#Makefile
-make dist
-
-```
+请查看文档：[https://www.mtruning.club/](https://www.mtruning.club/)
 
 ## 代码提交
 
@@ -157,10 +119,9 @@ make dist
 - style: 不影响程序逻辑的代码修改
 - chore: 不属于以上类型的其他类型(日常事务)
 
-## 交流
+## 交流群
 
 QQ 群：663629294
-
-![QQ群](readme/go-view-qq.png)
+<img height="250px" src="readme/go-view-qq.png" alt="QQ群" />
 
 ![渲染海报](readme/logo-poster.png)
