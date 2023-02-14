@@ -159,7 +159,7 @@ make dist
 
 ## 交流
 
-QQ 群：1030129384
+QQ 群：663629294
 
 ![QQ群](readme/go-view-qq.png)
 
