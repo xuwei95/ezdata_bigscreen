@@ -8,14 +8,14 @@
 <div>
   <div align="center" style="column-gap: 20px;">
     <a
-      href="http://ccflow.org/from=goview"
+      href="http://www.ccflow.org/?from=goview"
       style="
         padding: 10px 20px;
         display: inline-block;
         border-radius: 10px;
         background: #f9f9f9;
       ">
-      <img src="readme/sponsors/ccflow-banner.png" alt="go-view" style="height: 40px;" />
+      <img src="readme/sponsors/ccflow-banner.png" alt="go-view" style="width: 250px;" />
     </a>
     <a
       href="https://www.qeasy.cloud/"
@@ -25,23 +25,9 @@
         border-radius: 10px;
         background: #f9f9f9;
       ">
-      <img src="readme/sponsors/qyy-banner.png" alt="go-view" style="height: 40px;" />
+      <img src="readme/sponsors/qyy-banner.png" alt="go-view" style="width: 250px;" />
     </a>
   </div>
-  <p
-    align="center"
-    style="
-      width: 540px;
-      margin: 5px auto;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      border-radius: 10px;
-      font-size: 14px;
-      background: #f9f9f9;
-    "
-  >
-  （长期赞助商）
-  </p>
 </div>
 
 #### 😶 **纯前端** 分支： **`master`**
