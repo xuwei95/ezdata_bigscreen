@@ -15,7 +15,7 @@
         border-radius: 10px;
         background: #f9f9f9;
       ">
-      <img src="readme/sponsors/ccflow-banner.png" alt="go-view" style="width: 250px;" />
+      <img src="readme/sponsors/ccflow-banner.png" alt="go-view" style="width: 250px;" width="250px" />
     </a>
     <a
       href="https://www.qeasy.cloud/"
@@ -25,7 +25,7 @@
         border-radius: 10px;
         background: #f9f9f9;
       ">
-      <img src="readme/sponsors/qyy-banner.png" alt="go-view" style="width: 250px;" />
+      <img src="readme/sponsors/qyy-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
     </a>
   </div>
 </div>
