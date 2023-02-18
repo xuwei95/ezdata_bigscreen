@@ -8,7 +8,7 @@
 <div>
   <div align="center" style="column-gap: 20px;">
     <a
-      href="http://www.ccflow.org/?from=goview"
+      href="http://www.ccflow.org/?from=goviewHome"
       style="
         padding: 10px 20px;
         display: inline-block;
