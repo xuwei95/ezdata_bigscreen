@@ -19,6 +19,7 @@
       ">
       <img src="readme/sponsors/ccflow-banner.png" alt="go-view" style="width: 250px;" width="250px" />
     </a>
+    <span> &nbsp;</span>
     <a
       href="https://www.qeasy.cloud/"
       style="
