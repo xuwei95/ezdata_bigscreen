@@ -10,6 +10,7 @@
   <div align="center" style="column-gap: 20px;">
     <a
       href="http://www.ccflow.org/?from=goviewGitee"
+      target="_blank"
       style="
         padding: 10px 20px;
         display: inline-block;
@@ -21,6 +22,7 @@
     <span> &nbsp;</span>
     <a
       href="https://www.qeasy.cloud/"
+      target="_blank"
       style="
         padding: 10px 20px;
         display: inline-block;
