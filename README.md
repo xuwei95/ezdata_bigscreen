@@ -1,10 +1,12 @@
-## 总览
+### 总览
 
 <p align="center">
     <img src="readme/logo-t-y.png" alt="go-view" />
 </p>
 
 <h4 align="center">开源、精美、便捷的「数据可视化」低代码开发平台</h4>
+
+### 长期赞助商
 <div>
   <div align="center" style="column-gap: 20px;">
     <a
