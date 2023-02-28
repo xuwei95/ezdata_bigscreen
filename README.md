@@ -85,6 +85,9 @@ Cloud IDE 代码在线预览地址：[https://idegitee.com/dromara/go-view](http
 高级事件编辑:
 ![高级事件编辑](readme/go-view-event.png)
 
+自定义组件颜色:
+![高级事件编辑](readme/go-view-echarts-color.png)
+
 快捷主页：
 ![快捷主页](readme/go-view-indexpage.png)
 
