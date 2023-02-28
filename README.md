@@ -44,8 +44,6 @@
 
 项目带后端-Demo 地址：[https://demo.mtruning.club/](https://demo.mtruning.club/)
 
-文档-源码地址：[https://gitee.com/MTrun/go-view-doc](https://gitee.com/MTrun/go-view-doc)
-
 Cloud IDE 代码在线预览地址：[https://idegitee.com/dromara/go-view](https://idegitee.com/dromara/go-view)
 
 #### 🤯 后端项目看这里!
