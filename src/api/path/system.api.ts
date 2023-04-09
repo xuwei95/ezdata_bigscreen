@@ -13,6 +13,16 @@ export const loginApi = async (data: object) => {
   }
 }
 
+// * token登录
+export const tokenLoginApi = async (data: object) => {
+  try {
+    const res = await http(RequestHttpEnum.POST)(`${ModuleTypeEnum.SYSTEM}/token_login`, data);
+    return res;
+  } catch(err) {
+    httpErrorHandle();
+  }
+}
+
 // * 登出
 export const logoutApi = async () => {
   try {

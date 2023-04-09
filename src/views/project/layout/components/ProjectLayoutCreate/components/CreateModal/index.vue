@@ -58,18 +58,18 @@ const typeList = shallowRef([
     icon: FishIcon,
     disabled: false
   },
-  {
-    title: renderLang('project.my_templete'),
-    key: PageEnum.BASE_HOME_TEMPLATE_NAME,
-    icon: ObjectStorageIcon,
-    disabled: true
-  },
-  {
-    title: renderLang('project.template_market'),
-    key: PageEnum.BASE_HOME_TEMPLATE_MARKET_NAME,
-    icon: StoreIcon,
-    disabled: true
-  }
+  // {
+  //   title: renderLang('project.my_templete'),
+  //   key: PageEnum.BASE_HOME_TEMPLATE_NAME,
+  //   icon: ObjectStorageIcon,
+  //   disabled: true
+  // },
+  // {
+  //   title: renderLang('project.template_market'),
+  //   key: PageEnum.BASE_HOME_TEMPLATE_MARKET_NAME,
+  //   icon: StoreIcon,
+  //   disabled: true
+  // }
 ])
 
 watch(() => props.show, newValue => {

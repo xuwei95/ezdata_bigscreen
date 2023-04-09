@@ -186,7 +186,7 @@ onMounted(() => {
   // 获取数据
   dataSyncFetch()
   // 定时更新数据
-  intervalDataSyncUpdate()
+  // intervalDataSyncUpdate()
 })
 </script>
 

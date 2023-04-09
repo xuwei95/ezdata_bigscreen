@@ -149,7 +149,7 @@ const t = window['$t']
 
 const formInline = reactive({
   username: 'admin',
-  password: 'admin',
+  password: 'qwer1234',
 })
 
 const rules = {
@@ -207,25 +207,25 @@ const handleSubmit = async (e: Event) => {
       const res = await loginApi({
         username,
         password
-      })
-      if(res && res.data) {
-        const { tokenValue, tokenName } = res.data.token
-        const { nickname, username, id } = res.data.userinfo
+      }) as unknown as MyResponseType
+      if(res.data) {
+        const tokenValue = res.data.token
+        const { avatar, nickname, username, id } = res.data.userinfo
 
-        // 存储到 pinia 
+        // 存储到 pinia
         systemStore.setItem(SystemStoreEnum.USER_INFO, {
-          [SystemStoreUserInfoEnum.USER_TOKEN]: tokenValue,
-          [SystemStoreUserInfoEnum.TOKEN_NAME]: tokenName,
+          [SystemStoreUserInfoEnum.USER_TOKEN]: 'JWT ' + tokenValue,
+          [SystemStoreUserInfoEnum.TOKEN_NAME]: 'Authorization',
           [SystemStoreUserInfoEnum.USER_ID]: id,
           [SystemStoreUserInfoEnum.USER_NAME]: username,
           [SystemStoreUserInfoEnum.NICK_NAME]: nickname,
+          [SystemStoreUserInfoEnum.AVATAR]: avatar,
           t
         })
-        
+
         window['$message'].success(t('login.login_success'))
         routerTurnByName(PageEnum.BASE_HOME_NAME, true)
       }
-      loading.value = false
     } else {
       window['$message'].error(t('login.login_message'))
     }

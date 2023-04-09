@@ -4,6 +4,7 @@ export enum SystemStoreUserInfoEnum {
   USER_ID = 'userId',
   USER_NAME = 'userName',
   NICK_NAME = 'nickName',
+  AVATAR = 'avatar'
 }
 
 export interface UserInfoType {
