@@ -1,6 +1,6 @@
 // 模块 Path 前缀分类
 export enum ModuleTypeEnum {
-  SYSTEM = 'sys/user',
+  SYSTEM = 'sys',
   PROJECT = 'screen/project',
 }
 

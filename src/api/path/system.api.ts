@@ -6,7 +6,7 @@ import { LoginResult } from './system'
 // * 登录
 export const loginApi = async (data: object) => {
   try {
-    const res = await http(RequestHttpEnum.POST)<LoginResult>(`${ModuleTypeEnum.SYSTEM}/login`, data)
+    const res = await http(RequestHttpEnum.POST)<LoginResult>(`${ModuleTypeEnum.SYSTEM}/user/login`, data)
     return res
   } catch (err) {
     httpErrorHandle()
@@ -16,7 +16,7 @@ export const loginApi = async (data: object) => {
 // * token登录
 export const tokenLoginApi = async (data: object) => {
   try {
-    const res = await http(RequestHttpEnum.POST)(`${ModuleTypeEnum.SYSTEM}/token_login`, data);
+    const res = await http(RequestHttpEnum.POST)(`${ModuleTypeEnum.SYSTEM}/user/token_login`, data);
     return res;
   } catch(err) {
     httpErrorHandle();
@@ -26,7 +26,7 @@ export const tokenLoginApi = async (data: object) => {
 // * 登出
 export const logoutApi = async () => {
   try {
-    const res = await http(RequestHttpEnum.GET)(`${ModuleTypeEnum.SYSTEM}/logout`)
+    const res = await http(RequestHttpEnum.GET)(`${ModuleTypeEnum.SYSTEM}/user/logout`)
     return res
   } catch (err) {
     httpErrorHandle()
@@ -41,7 +41,7 @@ export const ossUrlApi = async (data: object) => {
        * bucket 地址
        */
       bucketURL?: string
-    }>(`${ModuleTypeEnum.SYSTEM}/getOssInfo`, data)
+    }>(`${ModuleTypeEnum.PROJECT}/getOssInfo`, data)
     return res
   } catch (err) {
     httpErrorHandle()

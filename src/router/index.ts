@@ -2,7 +2,7 @@ import type { App } from 'vue'
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import { createRouterGuards } from './router-guards'
 import { PageEnum } from '@/enums/pageEnum'
-import { HttpErrorPage, LoginRoute, ReloadRoute, RedirectRoute } from '@/router/base'
+import { HttpErrorPage, LoginRoute, TokenLoginRoute, ReloadRoute, RedirectRoute } from '@/router/base'
 import { Layout } from '@/router/constant'
 
 import modules from '@/router/modules'
@@ -28,7 +28,7 @@ const RootRoute: Array<RouteRecordRaw> = [
 ]
 
 
-export const constantRouter: any[] = [LoginRoute, ...RootRoute, ReloadRoute];
+export const constantRouter: any[] = [LoginRoute, TokenLoginRoute, ...RootRoute, ReloadRoute];
 
 const router = createRouter({
   history: createWebHashHistory(''),

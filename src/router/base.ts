@@ -14,6 +14,15 @@ export const LoginRoute: RouteRecordRaw = {
   },
 };
 
+export const TokenLoginRoute: RouteRecordRaw = {
+  path: PageEnum.TOKEN_LOGIN,
+  name: PageEnum.TOKEN_LOGIN_NAME,
+  component: () => import('@/views/login/token_login.vue'),
+  meta: {
+    title: 'token登录',
+  },
+};
+
 export const HttpErrorPage: RouteRecordRaw[] = [
   {
     path: '/error/404',

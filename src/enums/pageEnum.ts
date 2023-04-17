@@ -22,6 +22,9 @@ export enum PageEnum {
   // 登录
   BASE_LOGIN = '/login',
   BASE_LOGIN_NAME = 'Login',
+  // token登录
+  TOKEN_LOGIN = '/token_login',
+  TOKEN_LOGIN_NAME = 'TokenLogin',
 
   //重定向
   REDIRECT = '/redirect',
