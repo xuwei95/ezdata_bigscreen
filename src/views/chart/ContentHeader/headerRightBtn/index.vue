@@ -58,7 +58,7 @@ const previewHandle = () => {
 // 发布
 const sendHandle = () => {
   goDialog({
-    message: '想体验发布功能，请前往 master-fetch 分支查看: https://demo.mtruning.club/#/login',
+    message: '想体验发布功能，请前往查看: https://demo.mtruning.club/#/login。源码需切换到：master-fetch 分支。',
     positiveText: '了然',
     closeNegativeText: true,
     onPositiveCallback: () => {}
