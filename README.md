@@ -1,4 +1,5 @@
 #### 总览
+
 <p align="center">
     <img src="readme/logo-t-y.png" alt="go-view" />
 </p>
@@ -6,6 +7,7 @@
 <h4 align="center">开源、精美、便捷的「数据可视化」低代码开发平台</h4>
 
 #### 长期赞助商
+
 <div>
   <div align="center" style="column-gap: 20px;">
     <a
@@ -31,6 +33,30 @@
       ">
       <img src="readme/sponsors/qyy-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
     </a>
+    <div style="margin-top:5px;"></div>
+    <a
+      href="https://fastbee.cn/"
+      target="_blank"
+      style="
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 10px;
+        background: #f9f9f9;
+      ">
+      <img src="readme/sponsors/fb-banner.gif" alt="go-view" style="width: 250px;" width="250px"/>
+    </a>
+    <span> &nbsp;</span>
+    <a
+      href="http://doc.zyplayer.com/#/integrate/zyplayer-doc?utm=goview"
+      target="_blank"
+      style="
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 10px;
+        background: #f9f9f9;
+      ">
+      <img src="readme/sponsors/zyplayer-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
+    </a>  
   </div>
 </div>
 
