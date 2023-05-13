@@ -23,19 +23,6 @@
     </a>
     <span> &nbsp;</span>
     <a
-      href="https://www.qeasy.cloud/"
-      target="_blank"
-      style="
-        padding: 10px 20px;
-        display: inline-block;
-        border-radius: 10px;
-        background: #f9f9f9;
-      ">
-      <img src="readme/sponsors/qyy-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
-    </a>
-    <br/>
-    <br/>
-    <a
       href="https://fastbee.cn/"
       target="_blank"
       style="
@@ -45,6 +32,19 @@
         background: #f9f9f9;
       ">
       <img src="readme/sponsors/fb-banner.gif" alt="go-view" style="width: 250px;" width="250px"/>
+    </a>
+    <br/>
+    <br/>
+    <a
+      href="https://www.qeasy.cloud/"
+      target="_blank"
+      style="
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 10px;
+        background: #f9f9f9;
+      ">
+      <img src="readme/sponsors/qyy-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
     </a>
     <span> &nbsp;</span>
     <a
