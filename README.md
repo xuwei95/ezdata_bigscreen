@@ -129,7 +129,7 @@ Cloud IDE 代码在线预览地址：[https://idegitee.com/dromara/go-view](http
 | 名称                | 版本  | 名称        | 版本   |
 | ------------------- | ----- | ----------- | ------ |
 | Vue                 | 3.2.x | TypeScript4 | 4.6.x  |
-| Vite                | 2.9.x | NaiveUI     | 2.27.x |
+| Vite                | 4.2.x | NaiveUI     | 2.34.x |
 | ECharts             | 5.3.x | Pinia       | 2.0.x  |
 | 详见 `package.json` | 😁    | 🥰          | 🤗     |
 
@@ -137,7 +137,7 @@ Cloud IDE 代码在线预览地址：[https://idegitee.com/dromara/go-view](http
 
 | 名称 | 版本    | 名称    | 版本  |
 | ---- | ------- | ------- | ----- |
-| node | 16.14.x | npm     | 8.5.x |
+| node | 16.16.x | npm     | 8.5.x |
 | pnpm | 7.1.x   | windows | 11    |
 
 已完成图表：

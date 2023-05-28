@@ -132,6 +132,11 @@ export const useSync = () => {
     ) => {
       // 补充 class 上的方法
       let newComponent: CreateComponentType = await createComponent(_componentInstance.chartConfig)
+      if (_componentInstance.chartConfig.redirectComponent) {
+        _componentInstance.chartConfig.dataset && (newComponent.option.dataset = _componentInstance.chartConfig.dataset)
+        newComponent.chartConfig.title = _componentInstance.chartConfig.title
+        newComponent.chartConfig.chartFrame = _componentInstance.chartConfig.chartFrame
+      }
       if (callBack) {
         if (changeId) {
           callBack(componentMerge(newComponent, { ..._componentInstance, id: getUUID() }))
@@ -156,7 +161,7 @@ export const useSync = () => {
       // 组件
       if (key === ChartEditStoreEnum.COMPONENT_LIST) {
         let loadIndex = 0
-        const listLength = projectData[key].length;
+        const listLength = projectData[key].length
         for (const comItem of projectData[key]) {
           // 设置加载数量
           let percentage = parseInt((parseFloat(`${++loadIndex / listLength}`) * 100).toString())
