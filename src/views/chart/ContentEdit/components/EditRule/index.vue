@@ -27,7 +27,7 @@
       </div>
     </div>
     <!-- 修复右下角白点用的 -->
-    <div v-if="designStore.getDarkTheme" class="fix-edit-screens-block"></div>
+    <!-- <div v-if="designStore.getDarkTheme" class="fix-edit-screens-block"></div> -->
   </div>
 </template>
 <script setup lang="ts">
@@ -318,6 +318,10 @@ window.onKeySpacePressHold = (isHold: boolean) => {
     &::-webkit-scrollbar-thumb {
       border-radius: 5px;
       background-color: rgba(144, 146, 152, 0.3);
+    }
+    // 修复右下角白点用的
+    &::-webkit-scrollbar-corner {
+      background-color: transparent;
     }
   }
 
