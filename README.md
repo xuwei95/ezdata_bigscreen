@@ -178,7 +178,7 @@ Cloud IDE 代码在线预览地址：[https://idegitee.com/dromara/go-view](http
 
 ## 交流群
 
-QQ 群：663629294
+QQ 群：881415392
 <img width="260px" src="readme/go-view-qq.png" alt="QQ群" style="border-radius: 20px" />
 
 ![渲染海报](readme/logo-poster.png)
