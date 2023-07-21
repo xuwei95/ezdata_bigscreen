@@ -35,7 +35,7 @@
 
   <!-- 弹窗 -->
   <n-modal class="go-chart-data-monaco-editor" v-model:show="showModal" :mask-closable="false" :closeOnEsc="false">
-    <n-card :bordered="false" role="dialog" size="small" aria-modal="true" style="width: 1000px; height: 600px">
+    <n-card :bordered="false" role="dialog" size="small" aria-modal="true" style="width: 1200px; height: 700px">
       <template #header>
         <n-space>
           <n-text>过滤器函数编辑器</n-text>
@@ -49,12 +49,12 @@
               <n-tag type="info">
                 <span class="func-keyword">function</span>&nbsp;&nbsp;filter(data, res)&nbsp;&nbsp;{
               </n-tag>
-              <monaco-editor v-model:modelValue="filter" width="460px" height="380px" language="javascript" />
+              <monaco-editor v-model:modelValue="filter" width="660px" height="500px" language="javascript" />
               <n-tag type="info">}</n-tag>
             </n-space>
           </div>
-          <n-divider vertical style="height: 480px" />
-          <n-scrollbar style="max-height: 480px">
+          <n-divider vertical style="height: 580px" />
+          <n-scrollbar style="max-height: 580px">
             <n-space :size="15" vertical>
               <div class="editor-data-show">
                 <n-space>
