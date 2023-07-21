@@ -290,7 +290,6 @@ window.onKeySpacePressHold = (isHold: boolean) => {
 
 <style lang="scss" scoped>
 @include go('sketch-rule') {
-  position: relative;
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -341,7 +340,7 @@ window.onKeySpacePressHold = (isHold: boolean) => {
 
   .canvas {
     position: absolute;
-    top: 50%;
+    top:50%;
     left: 50%;
     transform-origin: 50% 0;
     transform: translateY(-50%);
