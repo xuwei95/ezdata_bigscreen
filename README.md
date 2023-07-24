@@ -58,6 +58,19 @@
       ">
       <img src="readme/sponsors/zyplayer-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
     </a>  
+    <br/>
+    <br/>
+    <a
+      href="https://gitee.com/dandiankeji/icampus"
+      target="_blank"
+      style="
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 10px;
+        background: #f9f9f9;
+      ">
+      <img src="readme/sponsors/dandian-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
+    </a>  
   </div>
 </div>
 
