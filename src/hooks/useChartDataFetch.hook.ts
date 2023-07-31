@@ -95,7 +95,7 @@ export const useChartDataFetch = (
             fetchFn()
           },
           {
-            immediate: false,
+            immediate: true,
             deep: true
           }
         )
