@@ -8,7 +8,7 @@ export const BarLineConfig: ConfigType = {
     chartKey: 'VBarLine',
     conKey: 'VCBarLine',
     title: '柱状加折线图',
-    category: ChatCategoryEnum.COMBINATION,
+    category: ChatCategoryEnum.COMBINATIONS,
     categoryName: ChatCategoryEnumName.COMBINATION,
     package: PackagesCategoryEnum.CHARTS,
     chartFrame: ChartFrameEnum.ECHARTS,
