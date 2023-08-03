@@ -72,7 +72,7 @@
       <img src="readme/sponsors/dandian-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
     </a>  
     <a
-      href="https://www.mingdao.com/?s=utm_71&utm_source=Goview"
+      href="https://www.mingdao.com?s=utm_88&utm_source=Goview&utm_medium=banner&utm_campaign=gitee&utm_content=IT%E8%B5%8B%E8%83%BD%E4%B8%9A%E5%8A%A1"
       target="_blank"
       style="
         padding: 10px 20px;
