@@ -71,6 +71,17 @@
       ">
       <img src="readme/sponsors/dandian-banner.png" alt="go-view" style="width: 250px;" width="250px"/>
     </a>  
+    <a
+      href="https://www.mingdao.com/?s=utm_71&utm_source=Goview"
+      target="_blank"
+      style="
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 10px;
+        background: #f9f9f9;
+      ">
+      <img src="readme/sponsors/mdy-banner.png" alt="go-view" style="width: 270px;" width="270px"/>
+    </a>  
   </div>
 </div>
 
