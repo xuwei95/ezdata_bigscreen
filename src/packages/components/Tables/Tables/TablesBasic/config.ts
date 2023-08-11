@@ -5,26 +5,26 @@ import { chartInitConfig } from '@/settings/designSetting'
 import { TablesBasicConfig } from './index'
 import dataJson from './data.json'
 
-const {dimensions,source} = dataJson
+const { dimensions, source } = dataJson
 export const option = {
-  dataset:{dimensions,source},
-  pagination:{
+  dataset: { dimensions, source },
+  pagination: {
     page: 1,
-    pageSize:5
+    pageSize: 5
   },
-  align:'center',
-  style:{
-    border:'on',
-    singleColumn:'off',
-    singleLine:'off',
-    bottomBordered:'on',
-    striped:'on',
-    fontSize:16,
-    borderWidth:0,
-    borderColor:'black',
-    borderStyle:'solid'
+  align: 'center',
+  style: {
+    border: 'on',
+    singleColumn: 'off',
+    singleLine: 'off',
+    bottomBordered: 'on',
+    striped: 'on',
+    fontSize: 16,
+    borderWidth: 0,
+    borderColor: 'black',
+    borderStyle: 'solid'
   },
-  inputShow:"none"
+  inputShow: 'none'
 }
 
 export default class Config extends PublicConfigClass implements CreateComponentType {
