@@ -1,5 +1,6 @@
 <template>
   <collapse-item name="表格设置" :expanded="true">
+    <n-tag type="primary">若配置无响应，请在预览页面查看效果</n-tag>
     <setting-item-box :alone="true" name="对齐方式">
       <setting-item :alone="true">
         <n-select
@@ -70,7 +71,7 @@
       <setting-item name="边框样式" :alone="true">
         <n-select v-model:value="optionData.style.borderStyle" size="small" :options="borderStyleFlag" />
       </setting-item>
-      <SettingItem name="表格搜索" :alone="true">
+      <SettingItem name="表格搜索（前端静态搜索）" :alone="true">
         <n-select v-model:value="optionData.inputShow" size="small" :options="inputSelect" />
       </SettingItem>
     </setting-item-box>
