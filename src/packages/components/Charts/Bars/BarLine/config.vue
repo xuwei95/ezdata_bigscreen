@@ -1,43 +1,48 @@
 <template>
   <!-- Echarts 全局设置 -->
   <global-setting :optionData="optionData"></global-setting>
-  <CollapseItem v-for="(item, index) in seriesList" :key="index" :name="`${item.type=='bar' ? '柱状图' : '折线图'}`" :expanded="true">
-    <SettingItemBox name="图形" v-if="item.type=='bar'">
+  <CollapseItem
+    v-for="(item, index) in seriesList"
+    :key="index"
+    :name="`${item.type == 'bar' ? '柱状图' : '折线图'}`"
+    :expanded="true"
+  >
+    <SettingItemBox name="图形" v-if="item.type == 'bar'">
       <SettingItem name="宽度">
         <n-input-number
-            v-model:value="item.barWidth"
-            :min="1"
-            :max="100"
-            size="small"
-            placeholder="自动计算"
+          v-model:value="item.barWidth"
+          :min="1"
+          :max="100"
+          size="small"
+          placeholder="自动计算"
         ></n-input-number>
       </SettingItem>
       <SettingItem name="圆角">
         <n-input-number v-model:value="item.itemStyle.borderRadius" :min="0" size="small"></n-input-number>
       </SettingItem>
     </SettingItemBox>
-    <SettingItemBox name="线条" v-if="item.type=='line'">
+    <SettingItemBox name="线条" v-if="item.type == 'line'">
       <SettingItem name="宽度">
         <n-input-number
-            v-model:value="item.lineStyle.width"
-            :min="1"
-            :max="100"
-            size="small"
-            placeholder="自动计算"
+          v-model:value="item.lineStyle.width"
+          :min="1"
+          :max="100"
+          size="small"
+          placeholder="自动计算"
         ></n-input-number>
       </SettingItem>
       <SettingItem name="类型">
         <n-select v-model:value="item.lineStyle.type" size="small" :options="lineConf.lineStyle.type"></n-select>
       </SettingItem>
     </SettingItemBox>
-    <SettingItemBox name="实心点" v-if="item.type=='line'">
+    <SettingItemBox name="实心点" v-if="item.type == 'line'">
       <SettingItem name="大小">
         <n-input-number
-            v-model:value="item.symbolSize"
-            :min="1"
-            :max="100"
-            size="small"
-            placeholder="自动计算"
+          v-model:value="item.symbolSize"
+          :min="1"
+          :max="100"
+          size="small"
+          placeholder="自动计算"
         ></n-input-number>
       </SettingItem>
     </SettingItemBox>
@@ -56,8 +61,8 @@
       </setting-item>
       <setting-item name="位置">
         <n-select
-            v-model:value="item.label.position"
-            :options="[
+          v-model:value="item.label.position"
+          :options="[
             { label: 'top', value: 'top' },
             { label: 'left', value: 'left' },
             { label: 'right', value: 'right' },
@@ -83,7 +88,6 @@ const props = defineProps({
 })
 
 const seriesList = computed(() => {
-  console.log(props.optionData);
   return props.optionData.series
 })
 </script>
