@@ -30,40 +30,40 @@ const isFullscreen = ref(false)
 const checkFullscreen = () => {
   isFullscreen.value = !!(
     document.fullscreenElement ||
-    document.webkitFullscreenElement ||
-    document.mozFullScreenElement ||
-    document.msFullscreenElement
+    (document as any).webkitFullscreenElement ||
+    (document as any).mozFullScreenElement ||
+    (document as any).msFullscreenElement
   )
 }
 checkFullscreen()
 
-const requestFullscreen = element => {
+const requestFullscreen = (element: Element) => {
   if (element.requestFullscreen) {
     element.requestFullscreen()
-  } else if (element.mozRequestFullScreen) {
+  } else if ((document as any).mozRequestFullScreen) {
     /* Firefox */
-    element.mozRequestFullScreen()
-  } else if (element.webkitRequestFullscreen) {
+    (document as any).mozRequestFullScreen()
+  } else if ((document as any).webkitRequestFullscreen) {
     /* Chrome, Safari and Opera */
-    element.webkitRequestFullscreen()
-  } else if (element.msRequestFullscreen) {
+    (document as any).webkitRequestFullscreen()
+  } else if ((document as any).msRequestFullscreen) {
     /* IE/Edge */
-    element.msRequestFullscreen()
+    (document as any).msRequestFullscreen()
   }
 }
 
 const exitFullscreen = () => {
   if (document.fullscreenElement && document.exitFullscreen) {
     document.exitFullscreen()
-  } else if (document.mozFullScreenElement && document.mozCancelFullScreen) {
+  } else if ((document as any).mozFullScreenElement && (document as any).mozCancelFullScreen) {
     /* Firefox */
-    document.mozCancelFullScreen()
-  } else if (document.webkitFullscreenElement && document.webkitExitFullscreen) {
+    (document as any).mozCancelFullScreen()
+  } else if ((document as any).webkitFullscreenElement && (document as any).webkitExitFullscreen) {
     /* Chrome, Safari and Opera */
-    document.webkitExitFullscreen()
-  } else if (document.msFullscreenElement && document.msExitFullscreen) {
+    (document as any).webkitExitFullscreen()
+  } else if ((document as any).msFullscreenElement && (document as any).msExitFullscreen) {
     /* IE/Edge */
-    document.msExitFullscreen()
+    (document as any).msExitFullscreen()
   }
 }
 

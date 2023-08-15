@@ -12,7 +12,7 @@ export const option = {
 
 export default class Config extends PublicConfigClass implements CreateComponentType {
   public key = FullScreenConfig.key
-  public attr = { ...chartInitConfig, w: 150, h: 150 }
+  public attr = { ...chartInitConfig, w: 150, h: 150, zIndex: -1 }
   public chartConfig = cloneDeep(FullScreenConfig)
   public option = cloneDeep(option)
 }
