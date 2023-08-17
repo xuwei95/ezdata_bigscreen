@@ -84,7 +84,10 @@ export const option = {
         shadowColor: '#E1FFFF',
         shadowBlur: 10
       },
-      data: []
+      data: [],
+      encode: {
+        value: 2
+      }
     },
     {
       name: '区域',

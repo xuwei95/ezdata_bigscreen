@@ -525,8 +525,8 @@ export const useChartEditStore = defineStore({
         }
         const parseHandle = (e: CreateComponentType | CreateComponentGroupType) => {
           e = cloneDeep(e)
-          e.attr.x = this.getMousePosition.x + 30
-          e.attr.y = this.getMousePosition.y + 30
+          e.attr.x = this.getMousePosition.startX
+          e.attr.y = this.getMousePosition.startY
           // 外层生成新 id
           e.id = getUUID()
           // 分组列表生成新 id
@@ -535,11 +535,11 @@ export const useChartEditStore = defineStore({
               item.id = getUUID()
             })
           }
-        
+
           return e
         }
         const isCut = recordCharts.type === HistoryActionTypeEnum.CUT
-        const targetList = Array.isArray(recordCharts.charts) ? recordCharts.charts : [ recordCharts.charts ]
+        const targetList = Array.isArray(recordCharts.charts) ? recordCharts.charts : [recordCharts.charts]
         // 多项
         targetList.forEach((e: CreateComponentType | CreateComponentGroupType) => {
           this.addComponentList(parseHandle(e), undefined, true)
@@ -639,7 +639,7 @@ export const useChartEditStore = defineStore({
           } else {
             const group = historyData[0] as CreateComponentGroupType
             group.groupList.forEach(item => {
-              ids.push(item.id)
+              ids.unshift(item.id)
             })
           }
           this.setGroup(ids, false)
@@ -788,7 +788,7 @@ export const useChartEditStore = defineStore({
           // 高
           groupAttr.b = b < y + h ? y + h : b
 
-          targetList.push(item)
+          targetList.unshift(item)
           historyList.push(toRaw(item))
         })
 
@@ -834,7 +834,7 @@ export const useChartEditStore = defineStore({
           if (isHistory) chartHistoryStore.createUnGroupHistory(cloneDeep([targetGroup]))
 
           // 分离组件并还原位置属性
-          targetGroup.groupList.forEach(item => {
+          targetGroup.groupList.reverse().forEach(item => {
             item.attr.x = item.attr.x + targetGroup.attr.x
             item.attr.y = item.attr.y + targetGroup.attr.y
             if (!callBack) {
