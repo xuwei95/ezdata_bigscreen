@@ -10,7 +10,8 @@
       ...getTransformStyle(item.styles),
       ...getStatusStyle(item.status),
       ...getPreviewConfigStyle(item.preview),
-      ...getBlendModeStyle(item.styles) as any
+      ...getBlendModeStyle(item.styles) as any,
+      ...getSizeStyle(item.attr)
     }"
   >
     <!-- 分组 -->
