@@ -218,4 +218,7 @@ QQ 群：881415392
 <img width="260px" src="readme/go-view-qq.jpg" alt="QQ群" style="border-radius: 20px" />
 
 ## Pro 部分功能展示
+
+体验地址： <a href="https://ai.goviewlink.com/" target="_blank">https://ai.goviewlink.com/</a>
+
 ![渲染海报](readme/logo-poster.png)
