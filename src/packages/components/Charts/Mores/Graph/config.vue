@@ -16,14 +16,14 @@
       </SettingItemBox>
       <SettingItemBox name="线条">
         <SettingItem name="弧线">
-        <!-- 需要输入两位的小数才会变化 -->
+          <!-- 需要输入两位的小数才会变化 -->
           <n-input-number
-          v-model:value="optionData.series[0].lineStyle.curveness"
-          :min="0"
-          :step="0.01"
-          placeholder="弯曲程度"
-          size="small"
-        ></n-input-number>
+            v-model:value="optionData.series[0].lineStyle.curveness"
+            :min="0"
+            :step="0.01"
+            placeholder="弯曲程度"
+            size="small"
+          ></n-input-number>
         </SettingItem>
       </SettingItemBox>
       <SettingItemBox name="图例">
@@ -32,10 +32,61 @@
             size="small"
             :modes="['hex']"
             v-model:value="optionData.legend.textStyle.color"
-        ></n-color-picker>
+          ></n-color-picker>
         </SettingItem>
         <SettingItem name="文本">
-          <n-input-number v-model:value="optionData.legend.textStyle.fontSize" :min="0" :step="1" size="small" placeholder="文字大小">
+          <n-input-number
+            v-model:value="optionData.legend.textStyle.fontSize"
+            :min="0"
+            :step="1"
+            size="small"
+            placeholder="文字大小"
+          >
+          </n-input-number>
+        </SettingItem>
+      </SettingItemBox>
+      <SettingItemBox name="力引导" v-show="graphConfig.layout == 'force'">
+        <SettingItem name="斥力因子">
+          <n-input-number
+            v-model:value="optionData.series[0].force.repulsion"
+            :min="0"
+            :step="1"
+            size="small"
+            placeholder="斥力因子大小"
+          >
+          </n-input-number>
+        </SettingItem>
+        <SettingItem name="引力因子">
+          <n-input-number
+            v-model:value="optionData.series[0].force.gravity"
+            :min="0"
+            :step="0.1"
+            size="small"
+            placeholder="引力因子"
+          >
+          </n-input-number>
+        </SettingItem>
+        <SettingItem name="节点距离">
+          <n-input-number
+            v-model:value="optionData.series[0].force.edgeLength"
+            :min="0"
+            :step="1"
+            size="small"
+            placeholder="节点距离"
+          >
+          </n-input-number>
+        </SettingItem>
+        <SettingItem name="迭代动画">
+          <n-select v-model:value="graphConfig.force.layoutAnimation" :options="LayoutAnimation" size="small" />
+        </SettingItem>
+        <SettingItem name="节点速度">
+          <n-input-number
+            v-model:value="optionData.series[0].force.friction"
+            :min="0"
+            :step="0.1"
+            size="small"
+            placeholder="节点速度"
+          >
           </n-input-number>
         </SettingItem>
       </SettingItemBox>
@@ -46,7 +97,7 @@
 <script setup lang="ts">
 import { PropType, computed } from 'vue'
 import { CollapseItem, SettingItemBox, SettingItem } from '@/components/Pages/ChartItemSetting'
-import { option, GraphLayout, LabelSwitch, LabelPosition } from './config'
+import { option, GraphLayout, LabelSwitch, LabelPosition, LayoutAnimation } from './config'
 import { GlobalThemeJsonType } from '@/settings/chartThemes/index'
 
 const props = defineProps({
@@ -56,7 +107,7 @@ const props = defineProps({
   }
 })
 
-const graphConfig = computed<typeof option.series[0]>(() => {
+const graphConfig = computed<(typeof option.series)[0]>(() => {
   return props.optionData.series[0]
 })
 </script>
