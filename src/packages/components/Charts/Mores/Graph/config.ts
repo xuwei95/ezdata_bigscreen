@@ -9,13 +9,14 @@ export const includes = []
 // 关系图布局
 export const GraphLayout = [
   { label: '无', value: 'none' },
-  { label: '环形', value: 'circular' }
+  { label: '环形', value: 'circular' },
+  { label: '力引导', value: 'force' }
 ]
 
 // 标签开关
 export const LabelSwitch = [
-  { label: '开启', value: 1 },
-  { label: '关闭', value: 0 }
+  { label: '开启', value: true },
+  { label: '关闭', value: false }
 ]
 
 // 标签位置
@@ -24,44 +25,57 @@ export const LabelPosition = [
   { label: '右侧', value: 'right' },
   { label: '顶部', value: 'top' },
   { label: '底部', value: 'bottom' },
-  { label: '内部', value: 'inside' },
+  { label: '内部', value: 'inside' }
+]
+
+// 图-迭代动画
+export const LayoutAnimation = [
+  { label: '开启', value: true },
+  { label: '关闭', value: false }
 ]
 
 export const option = {
-    dataset: { ...dataJson },
-    tooltip: {},
-    legend:{
-      show:true,
-      textStyle:{
-        color:"#eee",
-        fontSize: 14 ,
-      },
-      data: dataJson.categories.map(function (a) {
-          return a.name;
-      })
+  dataset: { ...dataJson },
+  tooltip: {},
+  legend: {
+    show: true,
+    textStyle: {
+      color: '#eee',
+      fontSize: 14
     },
-    series: [
-      {
-        type: 'graph',
-        layout: 'none', // none circular环形布局
-        data: dataJson.nodes,
-        links: dataJson.links,
-        categories: dataJson.categories,
-        label: { // 标签
-          show: 1,
-          position: 'right',
-          formatter: '{b}'
-        },
-        labelLayout: {
-          hideOverlap: true
-        },
-        lineStyle: {
-          color: 'source', // 线条颜色
-          curveness: 0.2 // 线条卷曲程度
-        }
+    data: dataJson.categories.map(function (a) {
+      return a.name
+    })
+  },
+  series: [
+    {
+      type: 'graph',
+      layout: 'none', // none circular环形布局
+      data: dataJson.nodes,
+      links: dataJson.links,
+      categories: dataJson.categories,
+      label: {
+        show: true,
+        position: 'right',
+        formatter: '{b}'
+      },
+      labelLayout: {
+        hideOverlap: true
+      },
+      lineStyle: {
+        color: 'source', // 线条颜色
+        curveness: 0.2 // 线条卷曲程度
+      },
+      force: {
+        repulsion: 100,
+        gravity: 0.1,
+        edgeLength: 30,
+        layoutAnimation: true,
+        friction: 0.6
       }
-    ]
-  };
+    }
+  ]
+}
 
 export default class Config extends PublicConfigClass implements CreateComponentType {
   public key = GraphConfig.key
