@@ -196,9 +196,7 @@ export const useSync = () => {
             chartHistoryStore.clearForwardStack()
           }
         }
-      } else {
-        // 非组件(顺便排除脏数据)
-        if (key !== 'editCanvasConfig' && key !== 'requestGlobalConfig') return
+      } else if (key === ChartEditStoreEnum.EDIT_CANVAS_CONFIG || key === ChartEditStoreEnum.REQUEST_GLOBAL_CONFIG) {
         componentMerge(chartEditStore[key], projectData[key], true)
       }
     }
