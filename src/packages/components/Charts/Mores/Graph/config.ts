@@ -15,8 +15,8 @@ export const GraphLayout = [
 
 // 标签开关
 export const LabelSwitch = [
-  { label: '开启', value: true },
-  { label: '关闭', value: false }
+  { label: '开启', value: 1 },
+  { label: '关闭', value: 0 }
 ]
 
 // 标签位置
@@ -30,8 +30,8 @@ export const LabelPosition = [
 
 // 图-迭代动画
 export const LayoutAnimation = [
-  { label: '开启', value: true },
-  { label: '关闭', value: false }
+  { label: '开启', value: 1 },
+  { label: '关闭', value: 0 }
 ]
 
 export const option = {
@@ -55,7 +55,7 @@ export const option = {
       links: dataJson.links,
       categories: dataJson.categories,
       label: {
-        show: true,
+        show: 1,
         position: 'right',
         formatter: '{b}'
       },
@@ -70,7 +70,7 @@ export const option = {
         repulsion: 100,
         gravity: 0.1,
         edgeLength: 30,
-        layoutAnimation: true,
+        layoutAnimation: 1,
         friction: 0.6
       }
     }

@@ -45,8 +45,8 @@
           </n-input-number>
         </SettingItem>
       </SettingItemBox>
-      <SettingItemBox name="力引导" v-show="graphConfig.layout == 'force'">
-        <SettingItem name="斥力因子">
+      <SettingItemBox name="力引导" v-if="optionData.series[0].force && graphConfig.layout == 'force'">
+        <SettingItem name="斥力因子" v-if="optionData.series[0].force.repulsion">
           <n-input-number
             v-model:value="optionData.series[0].force.repulsion"
             :min="0"
@@ -56,7 +56,7 @@
           >
           </n-input-number>
         </SettingItem>
-        <SettingItem name="引力因子">
+        <SettingItem name="引力因子" v-if="optionData.series[0].force.gravity">
           <n-input-number
             v-model:value="optionData.series[0].force.gravity"
             :min="0"
