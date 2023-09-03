@@ -1,9 +1,9 @@
-import {ChartList} from '@/packages/components/Charts/index'
-import {DecorateList} from '@/packages/components/Decorates/index'
-import {InformationList} from '@/packages/components/Informations/index'
-import {TableList} from '@/packages/components/Tables/index'
-import {PhotoList} from '@/packages/components/Photos/index'
-import {IconList} from '@/packages/components/Icons/index'
+import { ChartList } from '@/packages/components/Charts/index'
+import { DecorateList } from '@/packages/components/Decorates/index'
+import { InformationList } from '@/packages/components/Informations/index'
+import { TableList } from '@/packages/components/Tables/index'
+import { PhotoList } from '@/packages/components/Photos/index'
+import { IconList } from '@/packages/components/Icons/index'
 import { PackagesCategoryEnum, PackagesType, ConfigType, FetchComFlagType } from '@/packages/index.d'
 
 const configModules: Record<string, { default: string }> = import.meta.glob('./components/**/config.vue', {
@@ -72,7 +72,7 @@ const fetchComponent = (chartName: string, flag: FetchComFlagType) => {
  * @param {ConfigType} dropData 配置项
  */
 export const fetchChartComponent = (dropData: ConfigType) => {
-  const {key} = dropData
+  const { key } = dropData
   return fetchComponent(key, FetchComFlagType.VIEW)?.default
 }
 
@@ -81,7 +81,7 @@ export const fetchChartComponent = (dropData: ConfigType) => {
  * @param {ConfigType} dropData 配置项
  */
 export const fetchConfigComponent = (dropData: ConfigType) => {
-  const {key} = dropData
+  const { key } = dropData
   return fetchComponent(key, FetchComFlagType.CONFIG)?.default
 }
 
@@ -94,10 +94,7 @@ export const fetchImages = async (targetData?: ConfigType) => {
   // 正则判断图片是否为 url，是则直接返回该 url
   if (/^(http|https):\/\/([\w.]+\/?)\S*/.test(targetData.image)) return targetData.image
   // 新数据动态处理
-  const {
-    image,
-    package: targetDataPackage
-  } = targetData
+  const { image } = targetData
   // 兼容旧数据
   if (image.includes('@') || image.includes('base64')) return image
 
