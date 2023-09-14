@@ -1,6 +1,6 @@
 <p align="center">
   <a
-      href="https://ai.goviewlink.com?channel=mayun"
+      href="https://www.goviewlink.com?channel=mayun"
       target="_blank"
       style="
         padding: 10px 20px;
