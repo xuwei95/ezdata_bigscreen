@@ -6,7 +6,6 @@
     :key="item.id"
     :style="{
       ...getComponentAttrStyle(item.attr, index),
-      ...getFilterStyle(item.styles),
       ...getTransformStyle(item.styles),
       ...getStatusStyle(item.status),
       ...getPreviewConfigStyle(item.preview),
@@ -31,7 +30,10 @@
       :chartConfig="item"
       :themeSetting="themeSetting"
       :themeColor="themeColor"
-      :style="{ ...getSizeStyle(item.attr) }"
+      :style="{ 
+        ...getSizeStyle(item.attr),
+        ...getFilterStyle(item.styles)
+      }"
       v-on="useLifeHandler(item)"
     ></component>
   </div>
