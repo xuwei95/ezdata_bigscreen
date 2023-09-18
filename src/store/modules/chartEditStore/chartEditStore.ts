@@ -201,6 +201,10 @@ export const useChartEditStore = defineStore({
     setEditCanvasConfig<T extends keyof EditCanvasConfigType, K extends EditCanvasConfigType[T]>(key: T, value: K) {
       this.editCanvasConfig[key] = value
     },
+    // * 设置 peojectInfo 数据项
+    setProjectInfo<T extends keyof ProjectInfoType, K extends ProjectInfoType[T]>(key: T, value: K) {
+      this.projectInfo[key] = value
+    },
     // * 设置右键菜单
     setRightMenuShow(value: boolean) {
       this.rightMenuShow = value
