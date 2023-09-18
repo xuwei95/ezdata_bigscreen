@@ -1,31 +1,37 @@
 <template>
   <div
-    class="chart-item"
-    v-for="item in groupData.groupList"
-    :class="animationsClass(item.styles.animations)"
-    :key="item.id"
+    :class="animationsClass(groupData.styles.animations)"
     :style="{
-      ...getComponentAttrStyle(item.attr, groupIndex),
+      ...getSizeStyle(groupData.attr),
       ...getFilterStyle(groupData.styles),
-      ...getTransformStyle(groupData.styles),
+    }"
+  >
+    <div
+      class="chart-item"
+      v-for="item in groupData.groupList"
+      :class="animationsClass(item.styles.animations)"
+      :key="item.id"
+      :style="{
+      ...getComponentAttrStyle(item.attr, groupIndex),
       ...getStatusStyle(item.status),
       ...getPreviewConfigStyle(item.preview),
       ...getBlendModeStyle(item.styles) as any
     }"
-  >
-    <component
-      :is="item.chartConfig.chartKey"
-      :id="item.id"
-      :chartConfig="item"
-      :themeSetting="themeSetting"
-      :themeColor="themeColor"
-      :style="{
-        ...getSizeStyle(item.attr),
-        ...getFilterStyle(item.styles),
-        ...getTransformStyle(item.styles)
-      }"
-      v-on="useLifeHandler(item)"
-    ></component>
+    >
+      <component
+        :is="item.chartConfig.chartKey"
+        :id="item.id"
+        :chartConfig="item"
+        :themeSetting="themeSetting"
+        :themeColor="themeColor"
+        :style="{
+          ...getSizeStyle(item.attr),
+          ...getFilterStyle(item.styles),
+          ...getTransformStyle(item.styles)
+        }"
+        v-on="useLifeHandler(item)"
+      ></component>
+    </div>
   </div>
 </template>
 
