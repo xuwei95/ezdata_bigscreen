@@ -161,17 +161,17 @@ export const useChartEditStore = defineStore({
     },
     getComponentList(): Array<CreateComponentType | CreateComponentGroupType> {
       return this.componentList
-    },
-    // 获取需要存储的数据项
+    }
+  },
+  actions: {
+    // * 获取需要存储的数据项
     getStorageInfo(): ChartEditStorage {
       return {
         [ChartEditStoreEnum.EDIT_CANVAS_CONFIG]: this.getEditCanvasConfig,
         [ChartEditStoreEnum.COMPONENT_LIST]: this.getComponentList,
         [ChartEditStoreEnum.REQUEST_GLOBAL_CONFIG]: this.getRequestGlobalConfig
       }
-    }
-  },
-  actions: {
+    },
     // * 设置 editCanvas 数据项
     setEditCanvas<T extends keyof EditCanvasType, K extends EditCanvasType[T]>(key: T, value: K) {
       this.editCanvas[key] = value

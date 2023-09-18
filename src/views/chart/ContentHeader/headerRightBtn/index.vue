@@ -32,7 +32,7 @@ const previewHandle = () => {
   const { id } = routerParamsInfo.params
   // id 标识
   const previewId = typeof id === 'string' ? id : id[0]
-  const storageInfo = chartEditStore.getStorageInfo
+  const storageInfo = chartEditStore.getStorageInfo()
   const sessionStorageInfo = getLocalStorage(StorageEnum.GO_CHART_STORAGE_LIST) || []
 
   if (sessionStorageInfo?.length) {

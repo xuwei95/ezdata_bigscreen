@@ -26,6 +26,16 @@ export let packagesList: PackagesType = {
   [PackagesCategoryEnum.ICONS]: IconList
 }
 
+// 组件缓存, 可以大幅度提升组件加载速度
+const componentCacheMap = new Map<string, any>()
+const loadConfig = (packageName: string, categoryName: string, keyName: string) => {
+  const key = packageName + categoryName + keyName
+  if (!componentCacheMap.has(key)) {
+    componentCacheMap.set(key, import(`./components/${packageName}/${categoryName}/${keyName}/config.ts`))
+  }
+  return componentCacheMap.get(key)
+}
+
 /**
  * * 获取目标组件配置信息
  * @param targetData
@@ -35,10 +45,10 @@ export const createComponent = async (targetData: ConfigType) => {
   // redirectComponent 是给图片组件库和图标组件库使用的
   if (redirectComponent) {
     const [packageName, categoryName, keyName] = redirectComponent.split('/')
-    const redirectChart = await import(`./components/${packageName}/${categoryName}/${keyName}/config.ts`)
+    const redirectChart = await loadConfig(packageName, categoryName, keyName)
     return new redirectChart.default()
   }
-  const chart = await import(`./components/${targetData.package}/${category}/${key}/config.ts`)
+  const chart = await loadConfig(targetData.package, category, key)
   return new chart.default()
 }
 
@@ -84,7 +94,7 @@ export const fetchImages = async (targetData?: ConfigType) => {
   // 正则判断图片是否为 url，是则直接返回该 url
   if (/^(http|https):\/\/([\w.]+\/?)\S*/.test(targetData.image)) return targetData.image
   // 新数据动态处理
-  const { image, package: targetDataPackage } = targetData
+  const { image } = targetData
   // 兼容旧数据
   if (image.includes('@') || image.includes('base64')) return image
 
