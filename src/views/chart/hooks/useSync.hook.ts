@@ -322,7 +322,7 @@ export const useSync = () => {
     // 保存数据
     let params = new FormData()
     params.append('projectId', projectId)
-    params.append('content', JSONStringify(chartEditStore.getStorageInfo || {}))
+    params.append('content', JSONStringify(chartEditStore.getStorageInfo() || {}))
     const res= await saveProjectApi(params)
 
     if (res && res.code === ResultEnum.SUCCESS) {
