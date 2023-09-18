@@ -6,8 +6,8 @@
     :key="item.id"
     :style="{
       ...getComponentAttrStyle(item.attr, groupIndex),
-      ...getFilterStyle(item.styles),
-      ...getTransformStyle(item.styles),
+      ...getFilterStyle(groupData.styles),
+      ...getTransformStyle(groupData.styles),
       ...getStatusStyle(item.status),
       ...getPreviewConfigStyle(item.preview),
       ...getBlendModeStyle(item.styles) as any
@@ -19,7 +19,11 @@
       :chartConfig="item"
       :themeSetting="themeSetting"
       :themeColor="themeColor"
-      :style="{ ...getSizeStyle(item.attr) }"
+      :style="{
+        ...getSizeStyle(item.attr),
+        ...getFilterStyle(item.styles),
+        ...getTransformStyle(item.styles)
+      }"
       v-on="useLifeHandler(item)"
     ></component>
   </div>
