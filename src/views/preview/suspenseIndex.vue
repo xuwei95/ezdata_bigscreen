@@ -47,6 +47,7 @@ setTitle(`预览-${chartEditStore.editCanvasConfig.projectName}`)
 
 const previewRefStyle = computed(() => {
   return {
+    overflow: 'hidden',
     ...getEditCanvasConfigStyle(chartEditStore.editCanvasConfig),
     ...getFilterStyle(chartEditStore.editCanvasConfig)
   }

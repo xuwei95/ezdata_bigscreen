@@ -20,14 +20,14 @@ export const syncData = () => {
     onPositiveCallback: async () => {
       window['$message'].success('正在同步编辑器...')
       dataSyncUpdate && (await dataSyncUpdate())
-      dispatchEvent(new CustomEvent(SavePageEnum.CHART, { detail: chartEditStore.getStorageInfo }))
+      dispatchEvent(new CustomEvent(SavePageEnum.CHART, { detail: chartEditStore.getStorageInfo() }))
     }
   })
 }
 
 // 同步数据到预览页
 export const syncDataToPreview = () => {
-  dispatchEvent(new CustomEvent(SavePageEnum.CHART_TO_PREVIEW, { detail: chartEditStore.getStorageInfo }))
+  dispatchEvent(new CustomEvent(SavePageEnum.CHART_TO_PREVIEW, { detail: chartEditStore.getStorageInfo() }))
 }
 
 // 侦听器更新

@@ -158,7 +158,7 @@ const editHandle = () => {
 
 // 把内存中的数据同步到SessionStorage 便于传递给新窗口初始化数据
 const updateToSession = (id: string) => {
-  const storageInfo = chartEditStore.getStorageInfo
+  const storageInfo = chartEditStore.getStorageInfo()
   const sessionStorageInfo = getLocalStorage(StorageEnum.GO_CHART_STORAGE_LIST) || []
 
   if (sessionStorageInfo?.length) {
