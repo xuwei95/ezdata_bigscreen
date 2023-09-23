@@ -1,5 +1,7 @@
 node_modules
 .DS_Store
+datas
+bigscreen/
 dist
 dist-ssr
 *.local
