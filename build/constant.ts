@@ -1,5 +1,5 @@
 import path from 'path'
-export const OUTPUT_DIR = 'dist'
+export const OUTPUT_DIR = 'bigscreen'
 
 // monaco-editor 路径
 export const prefix = `monaco-editor/esm/vs`
